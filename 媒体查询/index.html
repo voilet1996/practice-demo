@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 既可以根据media属性进行link引入，也可以在style中书写 -->
+    <link rel="stylesheet" media="all and (max-width: 768px)" href="./small-device.css">
+    <link rel="stylesheet" media="all and (min-width: 768px)" href="./large-device.css">
+    <style>
+        /* 样式的优先级比正常的样式低，无法覆盖 */
+        /* <= 768px才能生效 */
+        /* @media all and (max-width: 768px){
+            
+            .wrapper .main .left{
+                display: none;
+            }
+            .wrapper .main .right{
+                width: 80% ;
+                
+
+            }
+        } */
+        /* 至少达到768px才能生效 */
+        /* @media all and (min-width: 768px){
+            
+            .wrapper .main .left{
+                display: block;
+            }
+            .wrapper .main .right{
+                width: 20%;
+
+            }
+        } */
+        /* @media  screen and (min-width: 1200px){
+            
+        } */
+        html,body{
+            width:100%;
+            height:100%;
+            /*  浏览器默认的8的margin */
+            margin: 0;
+        }
+        .wrapper{
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .wrapper .banner{
+            height: 80px;
+            width: 100%;
+            position:relative;
+            background-color: rgb(244, 244, 244);
+        }
+        .wrapper .banner .register{
+            width: 350px;
+            height: 100%;
+            position: absolute;
+            right: 10px;
+            line-height:80px;
+
+        }
+        .wrapper .banner .register span{
+            margin-right: 20px;
+
+        }
+        .wrapper .main{
+            flex: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+        }
+        .wrapper .main .left{
+            /* width: 32%; */
+            width: 600px;
+            margin-right: 75px;
+            /* height: 100%; */
+        }
+        .wrapper .main .right{
+            /* width: 20%; */
+            margin-top: 82px;
+           
+            /* height: 100%; */
+
+        }
+        .footer-text{
+            
+        }
+        .login{
+            width: 100%;
+            height:360px;
+            border:1px solid grey;
+
+        }
+        .img-div{
+            margin-bottom: 50px;
+        }
+        .img-div::after{
+            content: '';
+            clear:both;
+            display: block;
+        }
+        .img-div img{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <div class="register">
+                <span>中文|English</span>
+                <span>需要申请奖学金？</span>
+                <button style="background-color: red; color:white">学生注册</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div style="color: rgb(169, 3, 41);
+                font-size: 22px;
+                margin-bottom: 67px;">
+                    <div>中国政府奖学金</div>
+                    <div>来华留学管理信息系统</div>
+                </div>
+                <div class="img-div">
+                    <img src="./images/bg.png">
+                </div>
+                
+                <div style="display: flex;font-size: 14px;
+                justify-content: space-between;">
+                    <div class="footer-text">
+                        <div>关于</div>
+                        <div>版权所有.　国家留学基金管理委员会</div>
+                        <div>www.csc.edu.cn All Rights Reserved.</div>
+                        <div>Copyright©1999-2008</div>
+                    </div>
+                    <div class="footer-text">
+                        <div>联系我们</div>
+                        <div>单位地址:北京市车公庄大街9号A3楼13层(100044)</div>
+                        <div>如有任何意见与建议请写信至:</div>
+                        <div>webmaster@csc.edu.cn</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="login"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/* @media all and (min-width: 768px){ */
+    /* 至少达到768px才能生效 */
+    .wrapper .main .left{
+        display: block;
+    }
+    .wrapper .main .right{
+        width: 20%;
+        /* height: 100%; */
+
+    }
+/* } */

@@ -1,0 +1,11 @@
+/* @media all and (max-width: 768px){ */
+            
+    .wrapper .main .left{
+        display: none;
+    }
+    .wrapper .main .right{
+        width: 80% ;
+        /* height: 100%; */
+
+    }
+/* } */
