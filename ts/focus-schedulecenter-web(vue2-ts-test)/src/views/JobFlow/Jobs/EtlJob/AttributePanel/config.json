@@ -1,0 +1,15 @@
+{
+	"baseTask":{
+		"jobGroup":"",
+		"taskName":"",
+		"jobDesc":"",
+		"taskDesc":"",
+		"taskType":"ETLJob",
+		"isEnable":"1"
+	},
+	"ETLJob":{
+		"jobGroup":"",
+		"etlId":"",
+        "etlParam":""
+	}
+}

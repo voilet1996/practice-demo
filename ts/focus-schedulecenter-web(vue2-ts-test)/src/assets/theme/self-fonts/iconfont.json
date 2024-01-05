@@ -1,0 +1,121 @@
+{
+  "id": "3008332",
+  "name": "产品_调度中心",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "25115405",
+      "name": "icon-调试",
+      "font_class": "icon-tiaoshi",
+      "unicode": "e6bd",
+      "unicode_decimal": 59069
+    },
+    {
+      "icon_id": "24408938",
+      "name": "导航_保存",
+      "font_class": "daohang_baocun",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    },
+    {
+      "icon_id": "26455820",
+      "name": "左侧导航_并行网关",
+      "font_class": "zuocedaohang_binghangwangguan",
+      "unicode": "e79f",
+      "unicode_decimal": 59295
+    },
+    {
+      "icon_id": "24421771",
+      "name": "左侧导航_包含网关",
+      "font_class": "zuocedaohang_baohanwangguan",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "24421878",
+      "name": "左侧导航_唯一网关",
+      "font_class": "zuocedaohang_weiyiwangguan",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "24408901",
+      "name": "开始",
+      "font_class": "kaishi",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "24408908",
+      "name": "结束",
+      "font_class": "jieshu",
+      "unicode": "e695",
+      "unicode_decimal": 59029
+    },
+    {
+      "icon_id": "26442275",
+      "name": "左侧导航_shell任务",
+      "font_class": "zuocedaohang_shellrenwu1",
+      "unicode": "e79b",
+      "unicode_decimal": 59291
+    },
+    {
+      "icon_id": "26441905",
+      "name": "左侧导航_etl任务",
+      "font_class": "a-zuocedaohang_etlrenwu21",
+      "unicode": "e79a",
+      "unicode_decimal": 59290
+    },
+    {
+      "icon_id": "26441439",
+      "name": "左侧导航_Bean",
+      "font_class": "zuocedaohang_Bean",
+      "unicode": "e798",
+      "unicode_decimal": 59288
+    },
+    {
+      "icon_id": "26439974",
+      "name": "左侧导航_SQL任务",
+      "font_class": "zuocedaohang_SQLrenwu",
+      "unicode": "e791",
+      "unicode_decimal": 59281
+    },
+    {
+      "icon_id": "26438532",
+      "name": "左侧导航_Http任务",
+      "font_class": "zuocedaohang_Httprenwu",
+      "unicode": "e78c",
+      "unicode_decimal": 59276
+    },
+    {
+      "icon_id": "26428721",
+      "name": "调度次数",
+      "font_class": "a-tiaodu1",
+      "unicode": "e784",
+      "unicode_decimal": 59268
+    },
+    {
+      "icon_id": "26428675",
+      "name": "执行器数量",
+      "font_class": "zhihangqishuliang",
+      "unicode": "e783",
+      "unicode_decimal": 59267
+    },
+    {
+      "icon_id": "26428651",
+      "name": "任务数量",
+      "font_class": "renwushuliang",
+      "unicode": "e782",
+      "unicode_decimal": 59266
+    },
+    {
+      "icon_id": "26428563",
+      "name": "左侧导航_邮件任务",
+      "font_class": "zuocedaohang_youjianrenwu",
+      "unicode": "e781",
+      "unicode_decimal": 59265
+    }
+  ]
+}
