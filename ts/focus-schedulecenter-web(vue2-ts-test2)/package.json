@@ -1,0 +1,45 @@
+{
+    "name": "focus-schedulecenter-web",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve --open",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "codemirror": "^5.64.0",
+        "core-js": "^3.6.5",
+        "diagram-js-minimap": "^2.0.4",
+        "echarts": "^5.2.2",
+        "element-ui": "^2.15.5",
+        "framework-bpmn": "git+http://git.gofusion.cn/product/framework/framework-bpmn.git#develop",
+        "fusion-ui": "git+http://git.gofusion.cn/product/framework-fusion-ui.git#develop",
+        "vue": "^2.6.11",
+        "vue-class-component": "^7.2.6",
+        "vue-property-decorator": "^9.1.2",
+        "vue-router": "^3.2.0",
+        "vuex": "^3.6.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.7",
+        "@typescript-eslint/eslint-plugin": "^4.18.0",
+        "@typescript-eslint/parser": "^4.18.0",
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-plugin-typescript": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "@vue/eslint-config-typescript": "^7.0.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^6.7.2",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-vue": "^6.2.2",
+        "less": "^3.13.1",
+        "less-loader": "^5.0.0",
+        "prettier": "^2.2.1",
+        "typescript": "~4.1.5",
+        "vue-template-compiler": "^2.6.11"
+    }
+}

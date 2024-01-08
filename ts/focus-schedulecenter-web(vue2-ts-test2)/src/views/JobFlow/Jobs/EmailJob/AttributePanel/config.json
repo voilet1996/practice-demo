@@ -1,0 +1,16 @@
+{
+	"baseTask":{
+		"jobGroup":"",
+		"taskName":"",
+		"jobDesc":"",
+		"taskDesc":"",
+		"taskType":"EmailJob",
+		"isEnable":"1"
+	},
+	"EmailJob":{
+		"addressee":"",
+		"subject":"",
+		"content":"",
+		"isSendLog":""
+	}
+}

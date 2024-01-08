@@ -1,0 +1,13 @@
+{
+	"baseTask":{
+		"jobGroup":"",
+		"taskName":"",
+		"jobDesc":"",
+		"taskDesc":"",
+		"taskType":"BeanJob",
+		"isEnable":""
+	},
+	"BeanJob":{
+		"serviceUrl":""
+	}
+}
