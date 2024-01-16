@@ -173,6 +173,7 @@ import {
 import { getDashboardInfo, getChartInfo } from '../../utils/service'
 import * as echarts from 'echarts'
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
+const qaaa: IPageForm
 @Component({
     created() {
         this.queryBaseInfo()
@@ -209,14 +210,15 @@ import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 })
 export default class Home extends Vue {
     // data
+
     private displayData = {
         jobLogCount: '60',
         jobInfoCount: '20',
         executorCount: '12',
     }
-    private time = '1'
+    private time: string = '1'
     private customDate: Array<any> = []
-    private timeOptions: Array<any> = [
+    private timeOptions: ISelect[] = [
         { text: '今日', value: '1' },
         { text: '昨日', value: '2' },
         { text: '近一周', value: '3' },
@@ -225,7 +227,7 @@ export default class Home extends Vue {
         // { text: "未来三天", value: "5" },
         { text: '自定义', value: 'custom' },
     ]
-    private tableColumns: Array<any> = [
+    private tableColumns: ItableColumn = [
         { label: '调度时间', prop: 'triggerTime', width: '100' },
         { label: '调度任务名称', prop: 'scheduleName', width: '100' },
         { label: '编号', prop: 'id', width: '180' },
@@ -249,7 +251,7 @@ export default class Home extends Vue {
             ],
         },
     ]
-    private tableData = {
+    private tableData: ITableData = {
         page: 1,
         pagerows: 10,
         rows: [],
@@ -257,7 +259,7 @@ export default class Home extends Vue {
     }
 
     //日期分布图
-    private dateOption = {
+    private dateOption: ECOption = {
         title: {
             text: '日期分布图',
         },
@@ -299,7 +301,7 @@ export default class Home extends Vue {
         ],
     }
     //成功比例图
-    private roundOption = {
+    private roundOption: ECOption = {
         title: {
             text: '成功比例图',
             subtext: '',
@@ -332,12 +334,12 @@ export default class Home extends Vue {
             },
         ],
     }
-    private form = {
+    private form: IPageForm = {
         jobName: '',
         id: '',
         timeRange: [],
     }
-    private queryForm = {
+    private queryForm: IPageForm = {
         jobName: '',
         id: '',
         timeRange: [],
@@ -373,7 +375,7 @@ export default class Home extends Vue {
             ],
         }
     }
-    get displayBlocks() {
+    get displayBlocks(): IDisplayBlocks[] {
         return [
             {
                 text: '任务数量',
@@ -402,10 +404,10 @@ export default class Home extends Vue {
         ]
     }
 
-    tableSearch() {
+    tableSearch(): void {
         this.queryForm = JSON.parse(JSON.stringify(this.form))
     }
-    async queryBaseInfo() {
+    async queryBaseInfo(): Promise<void> {
         try {
             let res = await getDashboardInfo()
             if (res) {
@@ -416,12 +418,17 @@ export default class Home extends Vue {
             console.log(e)
         }
     }
-    async queryChartInfo(type, startDate = '', endDate = '') {
+    async queryChartInfo(
+        type: string,
+        startDate: string = '',
+        endDate: string = ''
+    ): Promise<void> {
         try {
             let res = await getChartInfo(type, startDate, endDate)
             if (res) {
                 let content = res.data[0].data.content
-                this.dateOption.xAxis.data = content.triggerDayList
+                this.dateOption.xAxis[0].data = content.triggerDayList
+
                 this.dateOption.series[0].data = content.triggerDayCountSucList
                 this.dateOption.series[1].data = content.triggerDayCountFailList
                 this.dateOption.series[2].data =
@@ -433,8 +440,10 @@ export default class Home extends Vue {
                     content.triggerCountFailTotal
                 this.roundOption.series[0].data[2].value =
                     content.triggerCountRunningTotal
-                let lineChartDom = document.querySelector('.line-chart')
-                let rounChartDom = document.querySelector('.round-chart')
+                let lineChartDom: HTMLElement =
+                    document.querySelector('.line-chart')
+                let rounChartDom: HTMLElement =
+                    document.querySelector('.round-chart')
                 this.drawChart(lineChartDom, this.dateOption)
                 this.drawChart(rounChartDom, this.roundOption)
             }
@@ -443,19 +452,19 @@ export default class Home extends Vue {
             console.log(e)
         }
     }
-    customDateChange(val) {
+    customDateChange(val: any[]) {
         if (val.length !== 0) {
             this.queryChartInfo('', val[0], val[1])
         }
     }
-    timeChange(val) {
+    timeChange(val: string) {
         if (val === 'custom') {
             this.customDateChange(this.customDate)
         } else {
             this.queryChartInfo(val)
         }
     }
-    drawChart(dom, option) {
+    drawChart(dom: HTMLElement, option: ECOption) {
         let myChart = echarts.init(dom)
         myChart.setOption(option)
     }
@@ -463,7 +472,7 @@ export default class Home extends Vue {
         window.location.href = '/schedulecenter/#/JobScheduling'
     }
     // 表格转码
-    tableChangeCode(data, arr) {
+    tableChangeCode(data: string, arr: any[]) {
         if (data) {
             let res = ''
             let filArr = arr.filter((item) => item.value === data.trim())

@@ -10,4 +10,7 @@ declare global {
             [elem: string]: any
         }
     }
+    type Type1 = {}
 }
+// 当声明文件里面有import引入的时候，必须放在global里面才可生效
+type Type3 = {}
