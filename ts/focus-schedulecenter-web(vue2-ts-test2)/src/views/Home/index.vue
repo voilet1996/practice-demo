@@ -173,7 +173,15 @@ import {
 import { getDashboardInfo, getChartInfo } from '../../utils/service'
 import * as echarts from 'echarts'
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
-const qaaa: IPageForm
+import {
+    ISelect,
+    IDisplayBlocks,
+    IPageForm,
+    ItableColumn,
+    ITableColumnObject,
+    ITableData,
+    ECOption,
+} from '../../typings/global'
 @Component({
     created() {
         this.queryBaseInfo()

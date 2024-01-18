@@ -52,16 +52,16 @@ module.exports = {
         entry: './src/main.ts',
         module: {
             rules: [
-                // 引入ts，需要加上的一段解析ts的配置
+    // 引入ts，需要加上的一段解析ts的配置
 
-                {
-                    test: /\.tsx?$/,
-                    loader: 'ts-loader',
-                    // 给vue文件后面加上ts/tsx的后缀，用于编译
-                    options: { appendTsSuffixTo: ['\\.vue$'] },
-                    exclude: /node-modules/,
-                },
-            ],
+    {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        // 给vue文件后面加上ts/tsx的后缀，用于编译
+        options: { appendTsSuffixTo: ['\\.vue$'] },
+        exclude: /node-modules/,
+    },
+],
         },
         resolve: {
             extensions: ['.ts', '.js', '.vue', '.json'],

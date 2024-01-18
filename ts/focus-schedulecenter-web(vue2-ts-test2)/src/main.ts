@@ -12,11 +12,7 @@ const store = new Vuex.Store(storeConfig)
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
-console.log(aaaaa)
-const ross: ITableColumnObject = {}
-const ross: ItableColumn = []
-const ross: ITableColumnObject = {}
-const ross1: ITableData = {}
+
 new Vue({
     router,
     store,
